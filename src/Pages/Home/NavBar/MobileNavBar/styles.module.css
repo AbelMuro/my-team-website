@@ -1,0 +1,140 @@
+.nav{
+    width: 90%;
+    margin: auto;
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.nav_logo{
+    width: 128px;
+    object-fit: contain;
+}
+
+.menuButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menuIcon{
+    cursor: pointer;
+    width: 20px;
+    height: 17px;
+    mask-image: url('./icons/icon-hamburger.svg');
+    -webkit-mask-image: url('./icons/icon-hamburger.svg');
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: none;
+    mask-size: 20px 17px;
+    -webkit-mask-size: 20px 17px;
+    background-color: white;
+}
+
+.menuIcon:hover{
+    background-color: #F67e7E;
+}
+
+
+
+
+
+
+
+
+
+
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.50);
+    transition: none;
+    clip-path: circle(0px at 400px 60px)
+}
+
+.menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0px;
+    width: 255px;
+    height: 100vh;
+    background: #2C6269;
+    padding: 56px 25px 0px 48px;
+    transition: none;
+    clip-path: circle(0px at 200px 60px);
+}
+
+.menu_close{
+    cursor: pointer;
+    width: 18px;
+    height: 17px;
+    mask-image: url('./icons/icon-close.svg');
+    -webkit-mask-image: url('./icons/icon-close.svg');
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: none;
+    mask-size: 18px 17px;
+    -webkit-mask-size: 18px 17px;
+    align-self: end;
+    margin-bottom: 39px;
+    background-color: white;
+}
+
+.menu_close:hover{
+    background-color: #F67E7E;
+}
+
+
+.menu_links{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.menu_link{
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+    cursor: pointer;
+}
+
+.menu_link:hover{
+    color: #F67E7E;
+}
+
+.contact{
+    width: 159px;
+    height: 48px;
+    border-radius: 24px;
+    border: 2px solid #FFF;
+    background-color: transparent;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.contact:hover{
+    background-color: white;
+    color: #002529;
+    cursor: pointer;
+}

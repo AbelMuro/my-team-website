@@ -1,0 +1,136 @@
+.header{
+    width: 1110px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.darkCircle{
+    width: 200px;
+    object-fit: contain;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    left: -150px;
+    z-index: var(--farthest)
+}
+
+.header_title{
+    width: 535px;
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 6.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px; /* 100% */
+    flex-shrink: 0;
+    position: relative;
+    z-index: var(--farthest)
+}
+
+.header_title span{
+    color: #F67E7E;
+    font-family: var(--font);
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px;
+}
+
+.header_desc{
+    width: 445px;
+    display: flex;
+    flex-direction: column;
+    gap: 79px;
+    flex-shrink: 1;
+}
+
+.header_desc hr{
+    width: 50px;
+    height: 4px;
+    background-color: #79C8C7;
+    border: none;
+    outline: none;
+}
+
+.header_desc p {
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+}
+
+@media(max-width: 1170px){
+    .header{
+        gap: 30px;
+        width: 90%;
+    }
+    .header_title, .header_title span{
+        font-size: 5rem;
+        line-height: 76px;
+    }
+
+    .header_title{
+        width: 450px;
+    }
+
+    .header_desc p{
+        width: auto;
+    }
+}
+
+@media(max-width: 800px){
+    .header{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .darkCircle{
+        display: none;
+    }
+
+    .header_title{
+        width: 370px;
+    }
+
+    .header_title, .header_title span{
+        font-size: 4rem;
+        text-align: center;
+        line-height: 56px;
+    }
+
+    .header_desc hr{
+        display: none;
+    }
+
+    .header_desc p {
+        text-align: center;
+    }
+}
+
+@media(max-width: 620px){
+
+    .header_title{
+        width: 230px;
+    }
+
+    .header_title, .header_title span{
+        font-size: 2.5rem;
+        line-height: 40px; /* 100% */
+    }
+
+    .header_desc{
+        width: 327px;
+    }
+
+    .header_desc p {
+        text-align: center;
+        font-size: 0.9375rem;
+        line-height: 28px; /* 186.667% */
+    }
+}

@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'livvic';
+    src: url('./Common/Fonts/Livvic-Bold.ttf');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'livvic';
+    src: url('./Common/Fonts/Livvic-SemiBold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'livvic';
+    src: url('./Common/Fonts/Livvic-Medium.ttf');
+    font-weight: 600;
+}
+
+
+:root{
+    --font: 'livvic';
+    --closest: 100;
+    --closer: 75;
+    --close: 50;
+    --far: 25;
+    --farthest: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.2s linear;
+}
+
+body{
+    background-color: #014E56;
+}
+
+body, html, #root{
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100% 
+}
