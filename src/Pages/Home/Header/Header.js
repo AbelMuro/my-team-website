@@ -1,11 +1,9 @@
 import React from 'react';
-import images from './images';
 import styles from './styles.module.css';
 
 function Header() {
     return(
         <header className={styles.header}>
-            <img className={styles.darkCircle} src={images['darkCircle']}/>
             <h1 className={styles.header_title}>
                 Find the best <span>talent</span>
             </h1>

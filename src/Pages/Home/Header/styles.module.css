@@ -5,17 +5,23 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-bottom: 250px;
 }
 
 .darkCircle{
     width: 200px;
     object-fit: contain;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
+    top: 250px;
     margin: auto;
     left: -150px;
     z-index: var(--farthest)
+}
+
+.pinkCircle{
+    width: 358px;
+    object-fit: contain;
+
 }
 
 .header_title{
@@ -28,7 +34,8 @@
     line-height: 100px; /* 100% */
     flex-shrink: 0;
     position: relative;
-    z-index: var(--farthest)
+    z-index: var(--farthest);
+    align-self: start;
 }
 
 .header_title span{
@@ -69,10 +76,14 @@
     .header{
         gap: 30px;
         width: 90%;
+        height: 166px;
     }
     .header_title, .header_title span{
         font-size: 5rem;
         line-height: 76px;
+    }
+    .header_desc{
+        gap: 50px;
     }
 
     .header_title{
@@ -88,6 +99,8 @@
     .header{
         flex-direction: column;
         gap: 24px;
+        margin-bottom: 256px;
+        height: auto;
     }
 
     .darkCircle{
@@ -95,6 +108,7 @@
     }
 
     .header_title{
+        align-self: initial;
         width: 370px;
     }
 
@@ -114,6 +128,9 @@
 }
 
 @media(max-width: 620px){
+    .header{
+        margin-bottom: 197px;
+    }
 
     .header_title{
         width: 230px;

@@ -1,0 +1,16 @@
+.darkCircle{
+    width: 200px;
+    object-fit: contain;
+    position: absolute;
+    top: 250px;
+    margin: auto;
+    left: -100px;
+    z-index: var(--farthest);
+    opacity: 1
+}
+
+@media(max-width: 800px){
+    .darkCircle{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,141 @@
+.company{
+    width: 1110px;
+    margin: 140px auto 140px auto;
+    display: grid;
+    row-gap: 56px;
+    column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.background{
+    border: 0.000001px solid transparent;
+    background-color: #004047;
+    position: relative;
+    z-index: var(--far);
+}
+
+.darkCircle{
+    width: 200px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.company_title{
+    grid-column: 1/4;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 48px; /* 100% */
+}
+
+.company_title span{
+    color: #79C8C7;
+    font-family: var(--font);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.company_review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company_review img:first-child{
+    position: relative;
+    z-index: var(--far);
+    top: 25px;
+    width: 67px;
+    object-fit: contain;
+}
+
+.company_review q{
+    position: relative;
+    z-index: var(--close);
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 166.667% */
+    margin-bottom: 24px;
+}
+
+.company_review h2{
+    color: #79C8C7;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+}
+
+.company_review i {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 0.8125rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 18px; /* 138.462% */
+    margin-bottom: 32px; 
+}
+.avatar{
+    border: 2px solid #C4FFFE;
+    border-radius: 100%;
+    width: 62px;
+    object-fit: contain;
+}
+
+@media(max-width: 1170px){
+    .company{
+        width: 90%;
+    }
+}
+
+@media(max-width: 800px){
+    .company{
+        margin: 100px auto 100px auto;
+        grid-template-columns: 1fr;
+        row-gap: 23px;
+    }
+
+    .company_title{
+        color: #fff;
+        text-align: center;
+        font-family: var(--font);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 32px;
+    }
+
+    .company_title span{
+        font-size: 2rem;
+    }
+
+    .company h1{
+        grid-column: 1/2;
+    }
+
+    .company_review q{
+        margin-bottom: 16px;
+    }
+
+    .company_review i {
+        margin-bottom: 16px;
+    }
+}
+
+@media(max-width: 620px){
+    .company{
+        margin: 140px auto 162px auto;
+    }
+}

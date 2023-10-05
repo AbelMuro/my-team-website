@@ -60,7 +60,8 @@
     left: 0px;
     background-color: rgba(0, 0, 0, 0.50);
     transition: none;
-    clip-path: circle(0px at 400px 60px)
+    clip-path: circle(0px at 400px 60px);
+    z-index: var(--closest);
 }
 
 .menu{
