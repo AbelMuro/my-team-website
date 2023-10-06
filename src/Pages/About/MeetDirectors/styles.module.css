@@ -1,0 +1,99 @@
+.background{
+    background-color: #004047;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.directors{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 30px;
+    row-gap: 76px;
+}
+
+.directors_title{
+    grid-column: 1/4;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.director_card{
+    width: 100%;
+    height: 253px;
+    background-color: #012F34;
+    transition: all 0.6s linear;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;  
+    backface-visibility: none;    
+    position: absolute;
+    inset: 0;
+    margin: auto;      
+}
+
+.front{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--far)
+}
+
+.back{
+    background-color: #002529;
+    transform: rotate3d(0, 1, 0, 180deg);
+    z-index: var(--farthest)
+}
+
+.director_card img {
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+    border: 2px solid #C4FFFE;
+    margin-bottom: 16px;
+    object-fit: contain;
+}
+
+.director_card h2{
+    color: #79C8C7;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+}
+
+.director_card i{
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 25px; /* 166.667% */
+}
+
+.director_card button{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background-color: #F67E7E;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0; 
+    margin: auto;
+}
