@@ -2,8 +2,27 @@
     background-color: #004047;
     height: 1000px;
     display: flex;
+    padding-top: 140px;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+}
+
+.darkCircle{
+    width: 200px;
+    object-fit: contain;
+    position: absolute;
+    top: 0px;
+    left: -100px;
+}
+
+.square{
+    width: 147px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 .directors{
@@ -22,6 +41,7 @@
     font-size: 3rem;
     font-weight: 700;
     line-height: 48px;
+    margin-bottom: -12px;
 }
 
 .director_card{
@@ -44,8 +64,8 @@
 .card_front{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 32px; 
     background-color: #012F34;
     z-index: var(--far);
     transition: all 0.6s linear;
@@ -188,5 +208,51 @@
     .directors{
         width: 90%;
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 800px){
+    .background{
+        height: 1219px;
+        padding-top: 100px;
+    }
+
+    .directors{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 11px;
+        row-gap: 76px;
+    }
+
+    .directors_title{
+        font-size: 2rem;
+        grid-column: 1/3;
+        margin-bottom: -28px;
+    }
+}
+
+
+@media(max-width: 620px){
+    .background{
+        height: 2073px;
+        padding-top: 88px;
+    }
+
+    .directors{
+        grid-template-columns: 1fr;
+        row-gap: 52px;
+    }
+
+    .directors_title{
+        grid-column: 1/2;
+        margin-bottom: -4px;
+    }
+    
+    .socialLinks li:nth-of-type(2){
+        width: 20px;
+        height: 20px;
+    }
+    
+    .darkCircle{
+        top: -100px;
     }
 }

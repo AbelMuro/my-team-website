@@ -1,0 +1,124 @@
+.background {
+    height: 437px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #012F34;
+    position: relative;
+    overflow: hidden;
+}
+
+.greenCircle{
+    width: 200px;
+    object-fit: contain;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.clients{
+    width: 1110px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 70px;
+}
+
+.clients_title{
+    grid-column: 1/6;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 100% */
+}
+
+
+.vergeLogo, .jakartaLogo, .guardianLogo, .techRadarLogo{
+    width: 165px;
+    object-fit: contain;
+}
+
+.gadgetsLogo{
+    width: 100px;
+    object-fit: contain;
+}
+
+@media(max-width: 1170px){
+    .clients{
+        width: 90%;
+    }
+}
+
+@media(max-width: 1100px){
+    .vergeLogo, .jakartaLogo, 
+    .guardianLogo, .techRadarLogo{
+        width: 125px;
+    }
+
+    .gadgetsLogo{
+        width: 85px;
+    }
+
+}
+
+@media(max-width: 800px){
+    .vergeLogo, .jakartaLogo, 
+    .guardianLogo, .techRadarLogo{
+        width: 105px;
+    }
+
+    .clients_title{
+        font-size: 2rem;
+        line-height: 32px;
+    }
+
+    .background {
+        height: 308px;
+    }
+    .greenCircle{
+        top: -100px;
+    }
+
+    .gadgetsLogo{
+        width: 65px;
+    }
+}
+
+@media(max-width: 620px){
+    .background{
+        height: 632px;
+    } 
+
+    .greenCircle{
+        left: -100px;
+    }
+
+    .clients_title{
+        grid-column: initial;
+        margin-bottom: 7px;
+    }
+
+    .clients{
+        grid-template-columns: auto;
+        row-gap: 57px;
+        justify-content: initial;
+        align-items: center;
+    }
+
+    .clients img {
+        margin: auto;
+    }
+
+    .vergeLogo, .jakartaLogo, 
+    .guardianLogo, .techRadarLogo{
+        width: 146px;
+    }
+
+    .gadgetsLogo{
+        width: 90px;
+    }
+}

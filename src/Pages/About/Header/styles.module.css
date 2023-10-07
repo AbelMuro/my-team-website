@@ -1,9 +1,22 @@
+.background{
+    position: relative;
+    border: 0.0000000000000000001px solid transparent;          /* used to prevent margin collapse*/
+}
+
 .header{
     display: flex;
     justify-content: space-between;
     width: 1110px;
     gap: 182px;
     margin: 0px auto 120px auto;
+    overflow: hidden
+}
+
+.pinkCircle{
+    width: 200px;
+    position: absolute;
+    bottom: 0px;
+    right: -100px
 }
 
 .header_title{
@@ -28,6 +41,7 @@
 }
 
 .header_desc p {
+    width: 90%;
     color: #FFF;
     font-family: var(--font);
     font-size: 1.125rem;
@@ -65,6 +79,8 @@
     }
 
     .header_desc p {
+        width: 70%;
+        margin: auto;
         text-align: center;
         color: #FFF;
         text-align: center;
@@ -79,10 +95,18 @@
         gap: 16px;
         margin-bottom: 108px;
     }
+
+    .pinkCircle{
+        bottom: -100px;
+    }
     
     .header_title{
         color: #FFF;
         font-size: 2.5rem;
         line-height: 40px; /* 100% */
+    }
+
+    .header_desc p{
+        width: 100%;
     }
 }

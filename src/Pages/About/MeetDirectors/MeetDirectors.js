@@ -2,8 +2,6 @@ import React from 'react';
 import images from './images';
 import styles from './styles.module.css';
 
-
-//i will need to create two cards in a container, front card and the back card, i will just need to flip both cards
 function MeetDirectors() {
 
     const flipCardToBack = (e) => {
@@ -22,6 +20,8 @@ function MeetDirectors() {
 
     return(
         <div className={styles.background}>
+            <img className={styles.darkCircle} src={images['darkCircle']}/>
+            <img className={styles.square} src={images['square']}/>
             <section className={styles.directors}>
                 <h1 className={styles.directors_title}>
                     Meet the directors
