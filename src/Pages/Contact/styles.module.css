@@ -1,0 +1,115 @@
+.contact {
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+    margin: 0px auto 114px auto;
+    gap: 35px;
+}
+
+.contact_intro{
+    width: 450px;
+    flex-shrink: 0;
+}    
+
+.contact_intro h1{
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px; /* 156.25% */
+    margin-bottom: 16px;
+}
+
+.contact_intro h2{
+    color: #F67E7E;
+    font-family: var(--font);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 150% */
+    margin-bottom: 32px;
+}
+
+.contact_intro ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact_intro ul li {
+    color: #FFF;
+    height: 72px;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; 
+    text-align: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.contact_intro ul li:nth-of-type(1)::before {
+    content: '';
+    display: inline-block;
+    height: 72px;
+    width: 72px;
+    background-image: url('./icons/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact_intro ul li:nth-of-type(2):before {
+    content: '';
+    display: inline-block;
+    height: 72px;
+    width: 72px;
+    background-image: url('./icons/icon-cog.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact_intro ul li:nth-of-type(3)::before {
+    content: '';
+    display: inline-block;
+    height: 72px;
+    width: 72px;
+    background-image: url('./icons/icon-chart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media(max-width: 1170px){
+    .contact{
+        width: 90%;
+    }
+}
+
+@media(max-width: 900px){
+    .contact{
+        flex-direction: column;
+        gap: 64px;
+    }
+    .contact_intro {
+        width: 100%;
+    }
+
+    .contact_intro h1{
+        line-height: 56px;
+        margin-bottom: 24px;
+    }
+
+    .contact_intro h1, .contact_intro h2{
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .contact_intro ul{
+        margin: auto;
+        width: 453px;
+    }
+
+}

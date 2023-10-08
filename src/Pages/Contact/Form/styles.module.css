@@ -1,0 +1,36 @@
+.form{
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-shrink: 1;
+}
+
+.submit{
+    cursor: pointer;
+    width: 123px;
+    height: 48px;
+    border-radius: 24px;
+    border: 2px solid #FFF;
+    background-color: #FFF;
+    color: #004047;
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+}
+
+.submit:hover{
+    border-radius: 24px;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    color: white;
+}
+
+@media(max-width: 900px){
+    .form{
+        width: 453px;
+        margin: auto;
+    }
+}

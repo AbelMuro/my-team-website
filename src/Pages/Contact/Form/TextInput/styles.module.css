@@ -1,0 +1,48 @@
+.container{
+    width: 100%;
+    height: 42px;
+    border: none;
+    border: none;
+    position: relative;
+}
+
+.input{
+    width: 100%;
+    padding: 0px 14px 16px 14px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 166.667% */
+    letter-spacing: -0.115px;
+}
+
+.input:focus{
+    outline: none;
+    border-bottom-color: #79C8C7;
+}
+
+.input:hover{
+    border-bottom-color: #79C8C7;
+}
+
+.input::placeholder{
+    color: var(--placeholder);
+}
+
+.errorMessage{
+    display: none;
+    color: #F67E7E;
+    font-family: var(--font);
+    font-size: 0.625rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    left: 14px;
+    bottom: -18px;
+}

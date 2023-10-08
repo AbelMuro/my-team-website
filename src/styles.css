@@ -24,6 +24,7 @@
     --close: 50;
     --far: 25;
     --farthest: 0;
+    --placeholder: rgba(255, 255, 255, 0.6);
 }
 
 

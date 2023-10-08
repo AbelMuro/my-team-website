@@ -1,11 +1,11 @@
 import React from 'react';
+import Form from './Form';
 import styles from './styles.module.css';
 
-//this is where i left off
 function Contact() {
     return(
             <main className={styles.contact}>
-                <section className={styles.contant_intro}>
+                <section className={styles.contact_intro}>
                     <h1>
                         Contact
                     </h1>
@@ -24,6 +24,9 @@ function Contact() {
                         </li>
                     </ul>
                 </section>
+                <Form/>
             </main>
         )
 }
+
+export default Contact;
