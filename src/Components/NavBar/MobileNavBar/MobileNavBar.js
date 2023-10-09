@@ -3,6 +3,7 @@ import {motion, useCycle} from 'framer-motion';
 import styles from './styles.module.css';
 import icons from '~/Common/icons';
 import { useNavigate } from 'react-router-dom';
+import images from './images'
 
 function MobileNavBar() {
     const navigate = useNavigate();
@@ -47,18 +48,19 @@ function MobileNavBar() {
 
     const handleLink = (e) => {
         const link = e.target.getAttribute('data-link');
+        setOpen(false);
+        window.scrollTo(0, 0);
         navigate(link);
     }
 
-
     return(
         <>
-            <nav className={styles.nav}>
-                <img className={styles.nav_logo} src={icons['logo']}/>
-                <button className={styles.menuButton} onClick={handleOpen}>
+            <motion.nav className={styles.nav} initial='hidden' whileInView='show' viewport={{once: true}} transition={{staggerChildren: 0.4}}>
+                <motion.img className={styles.nav_logo} variants={linkVariants} src={icons['logo']}/>
+                <motion.button className={styles.menuButton} variants={linkVariants} onClick={handleOpen}>
                     <div className={styles.menuIcon}></div>
-                </button>
-            </nav>  
+                </motion.button>
+            </motion.nav>  
             <motion.div className={styles.overlay} initial={false} animate={open ? 'show' : 'hidden'} variants={overlayVariants}>
                 <motion.div className={styles.menu} variants={menuVariants}>
                     <motion.div className={styles.menu_close} onClick={handleOpen} variants={linkVariants}></motion.div>
@@ -73,6 +75,7 @@ function MobileNavBar() {
                     <motion.button className={styles.contact} variants={linkVariants} data-link='/contact' onClick={handleLink}>
                         contact us
                     </motion.button>
+                    <motion.img className={styles.pinkCircle} variants={linkVariants} src={images['pinkCircle']}/>
                 </motion.div>              
             </motion.div>    
 

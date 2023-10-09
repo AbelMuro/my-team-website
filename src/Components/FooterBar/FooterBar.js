@@ -8,6 +8,7 @@ function FooterBar() {
 
     const handleLink = (e) => {
         const link = e.target.getAttribute('data-link');
+        window.scrollTo(0, 0);
         navigate(link);
     }
 

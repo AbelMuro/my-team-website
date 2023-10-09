@@ -4,11 +4,22 @@ import useMediaQuery from '~/Hooks/useMediaQuery.js';
 import { useNavigate } from 'react-router-dom';
 import icons from '~/Common/icons';
 import styles from './styles.module.css';
+import {motion} from 'framer-motion'
 
 function NavBar() {
     const navigate = useNavigate();
     const mobile = useMediaQuery('(max-width: 620px)');
 
+    const linkVariants = {
+        hidden: {
+            opacity: 0,
+            y: -100
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+        }
+    }
 
     const handleLink = (e) => {
         const link = e.target.getAttribute('data-link');
@@ -16,22 +27,22 @@ function NavBar() {
     }
 
     return mobile ? <MobileNavBar/> :
-        <nav className={styles.nav}>
+        <motion.nav className={styles.nav} initial={'hidden'} whileInView={'show'} viewport={{once: true}} transition={{staggerChildren: 0.4}}>
             <ul className={styles.nav_links}>
-                <li className={styles.nav_link}>
+                <motion.li className={styles.nav_link} variants={linkVariants}>
                     <img className={styles.nav_logo} src={icons['logo']}/>
-                </li>
-                <li className={styles.nav_link} data-link='/' onClick={handleLink}>
+                </motion.li>
+                <motion.li className={styles.nav_link} variants={linkVariants} data-link='/' onClick={handleLink}>
                     home
-                </li>
-                <li className={styles.nav_link} data-link='/about' onClick={handleLink}>
+                </motion.li>
+                <motion.li className={styles.nav_link} variants={linkVariants} data-link='/about' onClick={handleLink}>
                     about
-                </li>
+                </motion.li>
             </ul>
-            <button className={styles.nav_contact_button} data-link='/contact' onClick={handleLink}>
+            <motion.button className={styles.nav_contact_button} variants={linkVariants} data-link='/contact' onClick={handleLink}>
                 contact us
-            </button>
-        </nav>
+            </motion.button>
+        </motion.nav>
     
 }
 

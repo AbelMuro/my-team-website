@@ -1,10 +1,14 @@
 import React from 'react';
 import Form from './Form';
+import images from './images';
 import styles from './styles.module.css';
 
 function Contact() {
     return(
-            <main className={styles.contact}>
+        <main className={styles.container}>
+            <img className={styles.darkCircle} src={images['darkCircle']}/>
+            <img className={styles.pinkCircle} src={images['pinkCircle']}/>
+            <div className={styles.contact}>
                 <section className={styles.contact_intro}>
                     <h1>
                         Contact
@@ -25,7 +29,9 @@ function Contact() {
                     </ul>
                 </section>
                 <Form/>
-            </main>
+            </div>
+        </main>
+
         )
 }
 

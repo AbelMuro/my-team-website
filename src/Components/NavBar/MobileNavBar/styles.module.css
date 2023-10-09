@@ -77,6 +77,14 @@
     clip-path: circle(0px at 200px 60px);
 }
 
+.pinkCircle{
+    width: 200px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0px;
+    right: -100px;
+}
+
 .menu_close{
     cursor: pointer;
     width: 18px;
