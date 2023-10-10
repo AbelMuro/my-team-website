@@ -5,21 +5,11 @@ import { useNavigate } from 'react-router-dom';
 import icons from '~/Common/icons';
 import styles from './styles.module.css';
 import {motion} from 'framer-motion'
+import {linkVariants} from './Variants';
 
 function NavBar() {
     const navigate = useNavigate();
     const mobile = useMediaQuery('(max-width: 620px)');
-
-    const linkVariants = {
-        hidden: {
-            opacity: 0,
-            y: -100
-        },
-        show: {
-            opacity: 1,
-            y: 0,
-        }
-    }
 
     const handleLink = (e) => {
         const link = e.target.getAttribute('data-link');

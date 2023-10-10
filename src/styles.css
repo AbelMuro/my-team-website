@@ -39,8 +39,9 @@ body{
     background-color: #014E56;
 }
 
-body, html, #root{
-    min-height: 100vh;
-    overflow-x: hidden;
-    width: 100% 
-}
+html, body, #root {
+    min-height: 100vh;    
+    overflow-x: hidden;     
+    position: relative;    
+    transition: none;           
+  }

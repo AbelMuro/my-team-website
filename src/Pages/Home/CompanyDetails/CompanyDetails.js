@@ -3,49 +3,11 @@ import styles from './styles.module.css';
 import icons from './icons';
 import images from './images';
 import {motion} from 'framer-motion';
+import {imageVariants, descVariants, detailVariants, darkCircleVariants} from './Variants';
 
 
-//i will need to use photoshop and cut one of the images in half, i also need to find out whats wrong with the title text
+//need to fis the dark circle img
 function CompanyDetails() {
-
-
-    const imageVariants = {
-        hidden: {
-            scale: 0,
-        },
-        show: {
-            scale: 1,
-            transition: {type: 'spring', damping: 6, stiffness: 150}
-        }
-    }
-
-    const descVariants = {
-        hidden: {
-            opacity: 0,
-            x: -100,
-        },
-        show: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.4
-            }
-        }
-    }
-
-    const detailVariants = {
-        hidden: {
-            opacity: 0,
-            x: 100,
-        },
-        show: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.4
-            }
-        }
-    }
 
     return(
         <div className={styles.background} >
@@ -55,28 +17,28 @@ function CompanyDetails() {
                 initial='hidden' 
                 whileInView='show' 
                 variants={imageVariants}
-                viewport={{once: true, amount: 0.8}}/>
+                viewport={{once: true, amount: 0.6}}/>
             <motion.img 
                 className={styles.darkCircle} 
                 src={images['darkCircle']} 
                 initial='hidden' 
                 whileInView='show' 
                 variants={imageVariants}
-                viewport={{once: true}}/>
+                viewport={{once: true, amount: 1}}/>
             <motion.img 
                 className={styles.darkSquare} 
                 src={images['darkSquare']} 
                 initial='hidden' 
                 whileInView='show' 
                 variants={imageVariants}
-                viewport={{once: true, amount: 0.8}}/>
+                viewport={{once: true, amount: 0.6}}/>
             <section className={styles.company}>
                 <motion.div 
                     className={styles.company_desc} 
                     initial='hidden' 
                     whileInView='show' 
                     variants={descVariants}
-                    viewport={{once: true, amount: 0.8}}>
+                    viewport={{once: true, amount: 0.6}}>
                         <hr/>
                         <h1>
                             Build & manage distributed teams like no one else.
@@ -88,19 +50,19 @@ function CompanyDetails() {
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}/>
+                        viewport={{once: true, amount: 0.6}}/>
                     <motion.h1 
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}>
+                        viewport={{once: true, amount: 0.6}}>
                         Experienced Individuals
                     </motion.h1>
                     <motion.p 
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}>
+                        viewport={{once: true, amount: 0.6}}>
                             Our network is made up of highly 
                             experienced professionals 
                             who are passionate about what they do.
@@ -110,19 +72,19 @@ function CompanyDetails() {
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}/>
+                        viewport={{once: true, amount: 0.6}}/>
                     <motion.h1 
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}>
+                        viewport={{once: true, amount: 0.6}}>
                         Easy to Implement
                     </motion.h1>
                     <motion.p 
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}>
+                        viewport={{once: true, amount: 0.6}}>
                             Our processes have been refined over 
                             years of implementation meaning our 
                             teams always deliver.
@@ -132,19 +94,19 @@ function CompanyDetails() {
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}/>
+                        viewport={{once: true, amount: 0.6}}/>
                     <motion.h1 
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}>
+                        viewport={{once: true, amount: 0.6}}>
                         Enhanced Productivity
                     </motion.h1>
                     <motion.p 
                         initial='hidden' 
                         whileInView='show' 
                         variants={detailVariants}
-                        viewport={{once: true, amount: 0.8}}>
+                        viewport={{once: true, amount: 0.6}}>
                             Our customized platform with 
                             in-built analytics helps you 
                             manage your distributed teams.

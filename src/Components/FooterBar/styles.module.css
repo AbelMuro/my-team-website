@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .footer_content{
@@ -22,8 +23,7 @@
 }
 
 .footer_address{
-    color: #FFF;
-    opacity: 0.6;
+    color: rgba(255, 255, 255, 0.6);
     font-family: var(--font);
     font-size: 0.9375rem;
     font-weight: 600;
@@ -98,8 +98,7 @@
 }
 
 .footer_copyright{
-    opacity: 0.6;
-    color: #FFF;
+    color: rgba(255, 255, 255, 0.6);
     text-align: right;
     font-family: var(--font);
     font-size: 0.9375rem;

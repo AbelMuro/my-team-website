@@ -22,7 +22,7 @@
     object-fit: contain;
     position: absolute;
     bottom: 0px;
-    right: -122px;
+    right: 0px;
     z-index: var(--farthest)
 }
 
@@ -269,7 +269,7 @@
         width: 240px;
     }
 
-    .company_desc hr{
+    .company_desc p{
         font-size: 2rem;
         line-height: 32px; 
     }
