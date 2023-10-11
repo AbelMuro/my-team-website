@@ -6,7 +6,10 @@ export const titleVariants = {
     show: {
         opacity: 1,
         x: 0,
-        transition: {duration: 0.4}
+        transition: {
+            delay: 0.4,
+            duration: 0.4
+        }
     }
 }
 
@@ -18,6 +21,7 @@ export const descVariants = {
     show: {
         opacity: 1,
         x: 0,
-        transition: {duration: 0.4}
+        transition: {
+            duration: 0.4}
     }
 }
