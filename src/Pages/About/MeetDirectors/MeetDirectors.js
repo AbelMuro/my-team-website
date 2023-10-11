@@ -76,7 +76,7 @@ function MeetDirectors() {
                             <li></li>
                         </ul>
                         <button onClick={flipCardToFront}>
-                            x
+                            <img className={styles.cross} src={images['close']}/>
                         </button>
                     </div>    
                 </motion.div>
@@ -111,7 +111,7 @@ function MeetDirectors() {
                             <li></li>
                         </ul>
                         <button onClick={flipCardToFront}>
-                            x
+                            <img className={styles.cross} src={images['close']}/>
                         </button>
                     </div>  
                 </motion.div>
@@ -146,7 +146,7 @@ function MeetDirectors() {
                             <li></li>
                         </ul>
                         <button onClick={flipCardToFront}>
-                            x
+                            <img className={styles.cross} src={images['close']}/>
                         </button>
                     </div>  
                 </motion.div>
@@ -182,7 +182,7 @@ function MeetDirectors() {
                             <li></li>
                         </ul>
                         <button onClick={flipCardToFront}>
-                            x
+                            <img className={styles.cross} src={images['close']}/>
                         </button>
                     </div>  
                 </motion.div>
@@ -217,7 +217,7 @@ function MeetDirectors() {
                             <li></li>
                         </ul>
                         <button onClick={flipCardToFront}>
-                            x
+                            <img className={styles.cross} src={images['close']}/>
                         </button>
                     </div>  
                 </motion.div>
@@ -252,7 +252,7 @@ function MeetDirectors() {
                             <li></li>
                         </ul>
                         <button onClick={flipCardToFront}>
-                            x
+                            <img className={styles.cross} src={images['close']}/>
                         </button>
                     </div>  
                 </motion.div>

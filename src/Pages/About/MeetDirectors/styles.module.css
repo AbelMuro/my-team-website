@@ -102,10 +102,15 @@
     width: 56px;
     height: 56px;
     border-radius: 100%;
+    color: #012F34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
     background-color: #F67E7E;
     cursor: pointer;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     position: absolute;
     bottom: -30px;
@@ -113,6 +118,13 @@
     right: 0; 
     margin: auto;
 }
+.close{
+    width: 16px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+
 
 .card_front button:hover{
     background-color: #79c8c7;
@@ -158,7 +170,9 @@
     height: 56px;
     cursor: pointer;
     border-radius: 100%;    
+    font-family: var(--font);
     background-color: #79c8c7;
+    color: #012F34;
     border: none;
     position: absolute;
     bottom: -27px;
