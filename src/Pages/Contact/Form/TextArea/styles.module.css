@@ -5,6 +5,7 @@
 }
 
 .textarea{
+    border-radius: 0px;
     border: none;
     border-bottom: 1px solid white;
     padding-left: 14px;
