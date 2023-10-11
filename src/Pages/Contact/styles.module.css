@@ -10,7 +10,9 @@
     position: absolute;
     top: 0px;
     left: -100px;
+    opacity: 1;
     z-index: var(--farthest);
+    transition: all 0.2s linear;
 }
 
 .pinkCircle{
@@ -153,7 +155,7 @@
     }
 
     .darkCircle{
-        display: none;
+        opacity: 0;
     }
 
     .pinkCircle{

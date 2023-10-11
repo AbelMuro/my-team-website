@@ -6,7 +6,8 @@
     margin: auto;
     left: -100px;
     z-index: var(--farthest);
-    opacity: 1
+    opacity: 1;
+    transition: all 0.2s linear;
 }
 
 @media(max-width: 800px){

@@ -4,10 +4,13 @@ import {motion} from 'framer-motion';
 import {titleVariants, descVariants} from './Variants';
 
 function Header() {
-
-
     return(
-        <motion.header className={styles.header} initial='hidden' whileInView='show' viewport={{once: true}} transition={{staggerChildren: 0.6}}>
+        <motion.header 
+            className={styles.header} 
+            initial='hidden' 
+            whileInView='show' 
+            viewport={{once: true}} 
+            transition={{staggerChildren: 0.6}}>
             <motion.h1 className={styles.header_title} variants={titleVariants}>
                 Find the best <span>talent</span>
             </motion.h1>

@@ -15,7 +15,8 @@
     top: 250px;
     margin: auto;
     left: -150px;
-    z-index: var(--farthest)
+    z-index: var(--farthest);
+    transition: all 0.2s linear;
 }
 
 .pinkCircle{
