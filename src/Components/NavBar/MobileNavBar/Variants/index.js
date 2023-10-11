@@ -1,6 +1,6 @@
 export const overlayVariants = {
     hidden: {
-        clipPath: 'circle(0px at 400px 60px)',
+        clipPath: 'circle(0px at right top)',
         transition: {when: 'afterChildren', duration: 0.5},
     },
     show: {
@@ -11,7 +11,7 @@ export const overlayVariants = {
 
 export const menuVariants = {
     hidden: {
-        clipPath: 'circle(0px at 200px 60px)',
+        clipPath: 'circle(0px at 220px 60px)',
         transition: {when: 'afterChildren', duration: 0.5},
     },
     show: {
