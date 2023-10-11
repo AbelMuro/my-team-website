@@ -3,10 +3,9 @@ import styles from './styles.module.css';
 import icons from './icons';
 import images from './images';
 import {motion} from 'framer-motion';
-import {imageVariants, descVariants, detailVariants, darkCircleVariants} from './Variants';
+import {imageVariants, descVariants, detailVariants} from './Variants';
 
 
-//need to fis the dark circle img
 function CompanyDetails() {
 
     return(
@@ -24,7 +23,7 @@ function CompanyDetails() {
                 initial='hidden' 
                 whileInView='show' 
                 variants={imageVariants}
-                viewport={{once: true, amount: 1}}/>
+                viewport={{once: true, amount: 0.6}}/>
             <motion.img 
                 className={styles.darkSquare} 
                 src={images['darkSquare']} 
@@ -32,6 +31,7 @@ function CompanyDetails() {
                 whileInView='show' 
                 variants={imageVariants}
                 viewport={{once: true, amount: 0.6}}/>
+
             <section className={styles.company}>
                 <motion.div 
                     className={styles.company_desc} 

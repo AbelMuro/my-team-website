@@ -1,6 +1,8 @@
 import React from 'react';
 import images from './images';
 import styles from './styles.module.css';
+import {motion} from 'framer-motion';
+import {imageVariants, cardVariants, titleVariants} from './Variants';
 
 function MeetDirectors() {
 
@@ -20,24 +22,46 @@ function MeetDirectors() {
 
     return(
         <div className={styles.background}>
-            <img className={styles.darkCircle} src={images['darkCircle']}/>
-            <img className={styles.square} src={images['square']}/>
+            <motion.img 
+                className={styles.darkCircle} 
+                src={images['darkCircle']}
+                initial='hidden'
+                whileInView='show'
+                viewport={{once: true, amount: 0.6}}
+                variants={imageVariants}/>
+            <motion.img 
+                className={styles.square} 
+                src={images['square']}
+                initial='hidden'
+                whileInView='show'
+                viewport={{once: true, amount: 0.6}}
+                variants={imageVariants}/>
             <section className={styles.directors}>
-                <h1 className={styles.directors_title}>
+                <motion.h1 
+                    className={styles.directors_title} 
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: true, amount: 0.4}}
+                    variants={titleVariants}>
                     Meet the directors
-                </h1>
-                <div className={styles.director_card}>
+                </motion.h1>
+                <motion.div 
+                    className={styles.director_card} 
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: true, amount: 0.6}}
+                    variants={cardVariants}>
                     <div className={styles.card_front}>
-                        <img src={images['nikita']}/>
-                        <h2>
+                        <motion.img src={images['nikita']} variants={cardVariants}/>
+                        <motion.h2 variants={cardVariants}>
                             Nikita Marks
-                        </h2>
-                        <i>
+                        </motion.h2>
+                        <motion.i variants={cardVariants}>
                             Founder & CEO
-                        </i>
-                        <button onClick={flipCardToBack}>
+                        </motion.i>
+                        <motion.button onClick={flipCardToBack} variants={cardVariants}>
                             +
-                        </button>
+                        </motion.button>
                     </div>  
                     <div className={styles.card_back}>
                         <h2>
@@ -55,19 +79,24 @@ function MeetDirectors() {
                             x
                         </button>
                     </div>    
-                </div>
-                <div className={styles.director_card}>
+                </motion.div>
+                <motion.div 
+                    className={styles.director_card} 
+                    initial='hidden'
+                    whileInView='show'      
+                    viewport={{once: true, amount: 0.6}}              
+                    variants={cardVariants}>
                     <div className={styles.card_front}>
-                        <img src={images['christian']}/>
-                        <h2>
+                        <motion.img src={images['christian']} variants={cardVariants}/>
+                        <motion.h2 variants={cardVariants}>
                             Cristian Duncan
-                        </h2>
-                        <i>
+                        </motion.h2>
+                        <motion.i variants={cardVariants}>
                             Co-founder & COO
-                        </i>
-                        <button onClick={flipCardToBack}>
+                        </motion.i>
+                        <motion.button onClick={flipCardToBack} variants={cardVariants}>
                             +
-                        </button>
+                        </motion.button>
                     </div>
                     <div className={styles.card_back}>
                         <h2>
@@ -85,19 +114,24 @@ function MeetDirectors() {
                             x
                         </button>
                     </div>  
-                </div>
-                <div className={styles.director_card}>
+                </motion.div>
+                <motion.div 
+                    className={styles.director_card} 
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: true, amount: 0.6}}
+                    variants={cardVariants}>
                     <div className={styles.card_front}>
-                        <img src={images['cruz']}/>
-                        <h2>
+                        <motion.img src={images['cruz']} variants={cardVariants}/>
+                        <motion.h2 variants={cardVariants}>
                             Cruz Hamer
-                        </h2>
-                        <i>
+                        </motion.h2>
+                        <motion.i variants={cardVariants}>
                             Co-founder & CTO
-                        </i>
-                        <button onClick={flipCardToBack}>
+                        </motion.i>
+                        <motion.button onClick={flipCardToBack} variants={cardVariants}>
                             +
-                        </button>
+                        </motion.button>
                     </div>
                     <div className={styles.card_back}>
                         <h2>
@@ -115,19 +149,24 @@ function MeetDirectors() {
                             x
                         </button>
                     </div>  
-                </div>
-                <div className={styles.director_card}>
+                </motion.div>
+                <motion.div 
+                    className={styles.director_card} 
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: true, amount: 0.6}}
+                    variants={cardVariants}>
                     <div className={styles.card_front}>
-                        <img src={images['drake']}/>
-                        <h2>
+                        <motion.img src={images['drake']} variants={cardVariants}/>
+                        <motion.h2 variants={cardVariants}>
                             Drake Heaton
-                        </h2>
-                        <i>
+                        </motion.h2>
+                        <motion.i variants={cardVariants}>
                             Business Development Lead
-                        </i>
-                        <button onClick={flipCardToBack}>
+                        </motion.i>
+                        <motion.button onClick={flipCardToBack} variants={cardVariants}>
                             +
-                        </button>                        
+                        </motion.button>                        
                     </div>
                     <div className={styles.card_back}>
                         <h2>
@@ -146,19 +185,24 @@ function MeetDirectors() {
                             x
                         </button>
                     </div>  
-                </div>
-                <div className={styles.director_card}>
+                </motion.div>
+                <motion.div 
+                    className={styles.director_card} 
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: true, amount: 0.6}}
+                    variants={cardVariants}>
                     <div className={styles.card_front}>
-                        <img src={images['griffin']}/>
-                        <h2>
+                        <motion.img src={images['griffin']} variants={cardVariants}/>
+                        <motion.h2 variants={cardVariants}>
                             Griffin Wise
-                        </h2>
-                        <i>
+                        </motion.h2>
+                        <motion.i variants={cardVariants}>
                             Lead Marketing
-                        </i>
-                        <button onClick={flipCardToBack}>
+                        </motion.i>
+                        <motion.button onClick={flipCardToBack} variants={cardVariants}>
                             +
-                        </button>                        
+                        </motion.button>                        
                     </div>
                     <div className={styles.card_back}>
                         <h2>
@@ -176,19 +220,24 @@ function MeetDirectors() {
                             x
                         </button>
                     </div>  
-                </div>
-                <div className={styles.director_card}>
+                </motion.div>
+                <motion.div 
+                    className={styles.director_card} 
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: true, amount: 0.6}}
+                    variants={cardVariants}>
                     <div className={styles.card_front}>
-                        <img src={images['aden']}/>
-                        <h2>
+                        <motion.img src={images['aden']} variants={cardVariants}/>
+                        <motion.h2 variants={cardVariants}>
                             Aden Allan
-                        </h2>
-                        <i>
+                        </motion.h2>
+                        <motion.i variants={cardVariants}>
                             Head of Talent
-                        </i>
-                        <button onClick={flipCardToBack}>
+                        </motion.i>
+                        <motion.button onClick={flipCardToBack} variants={cardVariants}>
                             +
-                        </button>
+                        </motion.button>
                     </div>
                     <div className={styles.card_back}>
                         <h2>
@@ -206,7 +255,7 @@ function MeetDirectors() {
                             x
                         </button>
                     </div>  
-                </div>
+                </motion.div>
             </section>
         </div>
 

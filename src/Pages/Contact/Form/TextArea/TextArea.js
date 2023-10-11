@@ -1,5 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import styles from './styles.module.css';
+import {motion} from 'framer-motion';
+import {inputVariants} from './Variants';
 
 function TextArea() {
     const [text, setText] = useState('');
@@ -35,7 +37,7 @@ function TextArea() {
 
 
     return(
-        <fieldset className={styles.container}>
+        <motion.fieldset className={styles.container} variants={inputVariants}>
             <textarea 
                 name='textarea' 
                 value={text}
@@ -50,7 +52,7 @@ function TextArea() {
             <div className={styles.errorMessage} ref={errorMessageRef}>
                 This field is required
             </div>
-        </fieldset>
+        </motion.fieldset>
 
     )
 }

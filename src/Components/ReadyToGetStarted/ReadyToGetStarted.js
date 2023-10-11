@@ -19,7 +19,7 @@ function ReadyToGetStarted() {
                 className={styles.content}                 
                 initial='hidden'
                 whileInView='show'
-                viewport={{once: true}}>
+                viewport={{once: true, amount: 1}}>
                     <motion.h1 variants={titleVariants}>
                         Ready to get started?
                     </motion.h1>

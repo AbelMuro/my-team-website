@@ -13,7 +13,7 @@ function CompanyReviews() {
                 src={images['darkCircle']} 
                 initial='hidden' 
                 whileInView={'show'} 
-                viewport={{once: true, amount: 0.6}} 
+                viewport={{once: true, amount: 0.6, margin: '-100px'}} 
                 variants={imageVariants}/>
             <section className={styles.company}>
                 <motion.h1 

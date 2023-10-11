@@ -1,18 +1,25 @@
 import React from 'react';
 import styles from './styles.module.css';
 import images from './images';
+import {motion} from 'framer-motion';
+import {titleVariants, descVariants, imageVariants} from './Variants';
 
 function Header() {
     return(
-        <header className={styles.background}>
-            <img className={styles.pinkCircle} src={images['pinkCircle']}/>
+        <motion.header 
+            className={styles.background}
+            initial='hidden'
+            whileInView='show'
+            viewport={{once: true}}
+            transition={{staggerChildren: 0.4}}>
+            <motion.img className={styles.pinkCircle} src={images['pinkCircle']} variants={imageVariants}/>
             <section className={styles.header}>
-                <h1 className={styles.header_title}>
+                <motion.h1 className={styles.header_title} variants={titleVariants}>
                     About
-                </h1>
+                </motion.h1>
                 <div className={styles.header_desc}>
-                    <hr/>
-                    <p>
+                    <motion.hr variants={descVariants}/>
+                    <motion.p variants={descVariants}>
                         We help companies build dynamic teams 
                         made up of top global talent. 
                         Using our network of passionate 
@@ -21,10 +28,10 @@ function Header() {
                         Talented, diverse teams shape the 
                         best products and experiences. 
                         We’ll bring those teams to you.
-                    </p>
+                    </motion.p>
                 </div>
             </section>            
-        </header>
+        </motion.header>
 
     )
 }

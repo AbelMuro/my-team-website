@@ -1,5 +1,7 @@
 import React, {useRef, useState, useEffect} from 'react';
 import styles from './styles.module.css';
+import {motion} from 'framer-motion';
+import { inputVariants } from './Variants';
 
 function TextInput({type, placeholder}) {
     const [text, setText] = useState('');
@@ -54,7 +56,7 @@ function TextInput({type, placeholder}) {
     }, [text])
 
     return(
-        <fieldset className={styles.container}>
+        <motion.fieldset className={styles.container} variants={inputVariants}>
             <input 
                 type={type} 
                 value={text}
@@ -71,7 +73,7 @@ function TextInput({type, placeholder}) {
             <div className={styles.errorMessage} ref={invalidEmailRef}>
                 Not valid email
             </div>
-        </fieldset>
+        </motion.fieldset>
     )
 }
 

@@ -2,32 +2,51 @@ import React from 'react';
 import Form from './Form';
 import images from './images';
 import styles from './styles.module.css';
+import {motion} from 'framer-motion';
+import {imageVariants, textVariants} from './Variants';
 
 function Contact() {
     return(
         <main className={styles.container}>
-            <img className={styles.darkCircle} src={images['darkCircle']}/>
-            <img className={styles.pinkCircle} src={images['pinkCircle']}/>
+            <motion.img 
+                className={styles.darkCircle} 
+                src={images['darkCircle']}
+                initial='hidden'
+                whileInView='show'
+                viewport={{once: true, amount: 0.6}}
+                variants={imageVariants}/>
+            <motion.img 
+                className={styles.pinkCircle} 
+                src={images['pinkCircle']}
+                initial='hidden'
+                whileInView='show'
+                viewport={{once: true, amount: 0.2}}
+                variants={imageVariants}/>
             <div className={styles.contact}>
-                <section className={styles.contact_intro}>
-                    <h1>
+                <motion.section 
+                    className={styles.contact_intro}
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: true, amount: 0.6}}
+                    transition={{staggerChildren: 0.4}}>
+                    <motion.h1 variants={textVariants}>
                         Contact
-                    </h1>
-                    <h2>
+                    </motion.h1>
+                    <motion.h2 variants={textVariants}>
                         Ask us about
-                    </h2>
+                    </motion.h2>
                     <ul>
-                        <li>
+                        <motion.li variants={textVariants}>
                             The quality of our talent network
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li variants={textVariants}>
                             Usage & implementation of our software
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li variants={textVariants}>
                             How we help drive innovation
-                        </li>
+                        </motion.li>
                     </ul>
-                </section>
+                </motion.section>
                 <Form/>
             </div>
         </main>

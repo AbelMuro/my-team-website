@@ -1,6 +1,7 @@
 .background{
     position: relative;
     border: 0.0000000000000000001px solid transparent;          /* used to prevent margin collapse*/
+    overflow: hidden;
 }
 
 .header{
@@ -9,7 +10,6 @@
     width: 1110px;
     gap: 182px;
     margin: 0px auto 120px auto;
-    overflow: hidden
 }
 
 .pinkCircle{

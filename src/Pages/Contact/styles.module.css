@@ -14,11 +14,12 @@
 }
 
 .pinkCircle{
-    width: 180px;
+    width: 80px;
     object-fit: contain;
     position: absolute;
     bottom: 0px;
-    right: -110px;
+    right: 0px;
+    z-index: var(--farthest)
 }
 
 .contact {
@@ -156,8 +157,8 @@
     }
 
     .pinkCircle{
-        bottom: -100px;
-        right: -100px;
+        bottom: -90px;
+        right: 0px;
 
     }
 
