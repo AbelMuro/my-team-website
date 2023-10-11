@@ -33,14 +33,8 @@ function CompanyReviews() {
                     variants={textVariants}>
                     <motion.img 
                         src={images['quotes']} 
-                        initial='hidden' 
-                        whileInView='show' 
-                        viewport={{once: true, amount: 0.6}} 
                         variants={textVariants}/>
                     <motion.q 
-                        initial='hidden' 
-                        whileInView='show' 
-                        viewport={{once: true, amount: 0.6}} 
                         variants={textVariants}>
                             The team perfectly fit the 
                             specialized skill set required. 
@@ -50,25 +44,16 @@ function CompanyReviews() {
                             planned.
                     </motion.q>
                     <motion.h2 
-                        initial='hidden' 
-                        whileInView='show' 
-                        viewport={{once: true, amount: 0.6}} 
                         variants={textVariants}>
                         Kady Baker
                     </motion.h2>
                     <motion.i 
-                        initial='hidden' 
-                        whileInView='show' 
-                        viewport={{once: true, amount: 0.6}} 
                         variants={textVariants}>
                         Product Manager at Bookmark
                     </motion.i>
                     <motion.img 
                         className={styles.avatar} 
                         src={images['kady']} 
-                        initial='hidden' 
-                        whileInView='show'
-                        viewport={{once: true, amount: 0.6}} 
                         variants={textVariants}/>
                 </motion.div>
                 <motion.div 
